@@ -64,6 +64,7 @@ namespace Cinev.Views
                 }
                 string sub = concat.Substring(0, concat.Length - 2);
                 Genres.Text=sub;
+                Status.Text = r.Status;
 
 
 

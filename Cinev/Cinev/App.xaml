@@ -20,6 +20,7 @@
         <Color x:Key="DescColor">#7F8594</Color>
         <Color x:Key="ButtonColor">#5ACB6E</Color>
         <Color x:Key="PageColor">#F5F7F9</Color>
+        <Color x:Key="StatusColor">#f7b602</Color>
 
         <!--  font families  -->
         <OnPlatform x:Key="BoldFont" x:TypeArguments="x:String">
@@ -48,6 +49,12 @@
             <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
             <Setter Property="FontSize" Value="14" />
             <Setter Property="TextColor" Value="{StaticResource SubTextColor}" />
+        </Style>
+
+        <Style x:Key="Status" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource StatusColor}" />
         </Style>
 
 
