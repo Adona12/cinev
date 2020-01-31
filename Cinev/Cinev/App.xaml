@@ -17,6 +17,7 @@
         <!--  colors  -->
         <Color x:Key="MainTextColor">#5F6574</Color>
         <Color x:Key="SubTextColor">#B9BCC3</Color>
+        <Color x:Key="DescColor">#7F8594</Color>
         <Color x:Key="ButtonColor">#5ACB6E</Color>
         <Color x:Key="PageColor">#F5F7F9</Color>
 
@@ -41,6 +42,17 @@
         <Style x:Key="MovieName" TargetType="Label">
             <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
             <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource MainTextColor}" />
+        </Style>
+
+        <Style x:Key="Description" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource LightFont}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource DescColor}" />
+        </Style>
+        <Style x:Key="MovieNameBig" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+            <Setter Property="FontSize" Value="28" />
             <Setter Property="TextColor" Value="{StaticResource MainTextColor}" />
         </Style>
 

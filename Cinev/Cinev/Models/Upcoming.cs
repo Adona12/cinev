@@ -69,6 +69,8 @@ namespace Cinev
 
         [JsonProperty("release_date")]
         public DateTimeOffset ReleaseDate { get; set; }
+
+        public string ReleaseDateString { get { return ((ReleaseDate.ToString()).Split(' '))[0]; } }
     }
 
     public partial class Upcoming

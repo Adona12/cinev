@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              x:Class="Cinev.Views.UpcomingList"
              Title="Upcomings"
-             BackgroundColor="#e2e2e2"
+             
              >
 
 
@@ -18,7 +18,7 @@
 
                 <DataTemplate>
 
-                    <ViewCell  >
+                    <ViewCell >
                         <yummy:PancakeView Margin="10" 
                                            Padding="10" 
                                             BackgroundColor="White" 
@@ -37,30 +37,33 @@
                                         CornerRadius="10" 
                                        
                                         HorizontalOptions="Center" 
+                                    Margin="0,0,20,0"
                                        
                                         VerticalOptions="Center" 
                                        >   
                                    
-                                   <Image Aspect="AspectFill" Source="{Binding FullPath}" />
+                                   <Image  Aspect="AspectFill" Source="{Binding FullPath}" />
                                 </yummy:PancakeView>
 
 
 
-                                <StackLayout Orientation="Horizontal">
+                                <StackLayout WidthRequest="170" Spacing="20" Orientation="Vertical">
                                     <Label 
                                             FontSize="18" 
-                                        Margin="0,10,0,0"
+                                        Margin="5,10,0,0"
                                             LineBreakMode="NoWrap" 
                                             Style="{StaticResource MovieName}" 
                                             Text="{Binding Title}" />
 
 
-                                    <yummy:PancakeView BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="30" HorizontalOptions="EndAndExpand" WidthRequest="70">
+                                    <yummy:PancakeView BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="30" HorizontalOptions="StartAndExpand" WidthRequest="70">
                                         <StackLayout HorizontalOptions="Center" Orientation="Horizontal" VerticalOptions="Center">
                                             <Label FontFamily="{StaticResource MaterialFontFamily}" FontSize="20" Text="&#xf4ce;" TextColor="#f7b602" />
-                                            <Label FontSize="16" Style="{StaticResource LightFont}" Text="4.5" TextColor="#f7b602" />
+                                            <Label FontSize="16" Style="{StaticResource Rating}" Text="{Binding VoteAverage}" TextColor="#f7b602" />
                                         </StackLayout>
                                     </yummy:PancakeView>
+
+                                    <Label FontSize="16" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Style="{StaticResource SubText}" Text="{Binding ReleaseDateString}" TextColor="#b2b2b2" />
 
 
                                 </StackLayout>

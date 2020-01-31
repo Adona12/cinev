@@ -14,10 +14,12 @@ namespace Cinev.Views
     {
         public UpcomingDetails(Upcoming upcoming)
         {
+
+
             InitializeComponent();
             Title.Text = upcoming.Title;
 
-            MovieImage.Source = new UriImageSource()
+         MovieImage.Source = new UriImageSource()
             {
 
                 Uri = new Uri(upcoming.FullBackPath)
