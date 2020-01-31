@@ -28,11 +28,12 @@ namespace Cinev.Views
             
 
         }
-      
+        public  int globalID;
         public static  string HeartOutline = "\uf2d5";
         public static  string Heart = "\uf2d1";
         public UpcomingDetails(Upcoming upcoming){
             BindingContext = new IconFont("\uf2d1", "\uf2d5");
+            globalID = (int)upcoming.Id;
 
 
             InitializeComponent();
@@ -76,18 +77,25 @@ namespace Cinev.Views
 
         void OnTapGestureRecognizerTapped(object sender, EventArgs args)
         {
+
+
             
             var label = (Label)sender;
+         
            
             if (full)
             {
                 label.Text = HeartOutline;
                 full = false;
+                //globalID
+
             }
             else
             {
+
                 label.Text = Heart;
                 full = true;
+                //globalID
             }
         }
     }
