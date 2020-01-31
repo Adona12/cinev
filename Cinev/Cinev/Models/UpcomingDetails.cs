@@ -56,7 +56,7 @@ namespace Cinev.Models
         [JsonProperty("status")]
         public string Status { get; set; }
 
-        public string FullBackPath { get { return "http://image.tmdb.org/t/p/w500" + BackdropPath; } }
+        public string FullBackPath { get { return "http://image.tmdb.org/t/p/w1280" + BackdropPath; } }
 
 
         [JsonProperty("tagline")]

@@ -20,8 +20,8 @@
                     <Label x:Name="Genres" Margin="40,0,0,10" Style="{StaticResource Genre}"/>
                     <Label x:Name="Status"  Margin="40,0,0,0" Style="{StaticResource Status}"/>
                 </StackLayout>
-               
-                <yummy:PancakeView  Margin="0,0,50,0"  VerticalOptions="Center" HorizontalOptions="EndAndExpand"  BindableLayout.ItemsSource="{Binding Icons}" BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="40" WidthRequest="40">
+
+                <yummy:PancakeView  Margin="0,0,50,0"  VerticalOptions="Center" HorizontalOptions="EndAndExpand"  BindableLayout.ItemsSource="{Binding Icons}" BackgroundColor="#ffe8e3" CornerRadius="15" HeightRequest="40" WidthRequest="50">
                     <Label 
                          x:Name="HeartIcon"
                         FontFamily="{StaticResource MaterialFontFamily}" 
