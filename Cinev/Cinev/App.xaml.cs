@@ -10,10 +10,10 @@ namespace Cinev
         public App()
         {
             InitializeComponent();
-           
 
+           // MainPage = new MainPage();
             //   MainPage = new NavigationPage(new UpcomingList());
-            MainPage = new TabbedPage1();
+              MainPage = new TabbedPage1();
         }
 
         protected override void OnStart()

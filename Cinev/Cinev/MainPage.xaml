@@ -5,7 +5,45 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Cinev.MainPage">
-    
-     
+    <StackLayout
+        VerticalOptions="Center"
+        Margin="20">
+
+        <Label
+            Text="cinev park"
+            HorizontalOptions="Center"
+            TextColor="#4682B4"
+            FontSize="35"
+            Margin="0, 20"
+            />
+        <Entry
+            Placeholder="Full Name"
+            Keyboard="Text"
+            x:Name="fullInput"
+            />
+
+        <Entry
+            Placeholder="E-mail"
+            Keyboard="Email"
+            x:Name="EmailInput"
+            />
+
+        <Entry
+            Placeholder="Password"
+            IsPassword="true"
+            x:Name="PasswordInput"
+            />
+
+        <Button
+            Text="Enter"
+            x:Name="LogIn"
+           Clicked="LogIn_Clicked"  
+            Margin="60, 40"
+            BackgroundColor="#4682B4"
+            TextColor="White"
+            />
+
+    </StackLayout>
+
 
 </ContentPage>

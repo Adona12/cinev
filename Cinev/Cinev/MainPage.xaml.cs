@@ -19,7 +19,10 @@ namespace Cinev
             InitializeComponent();
         }
 
+        private void LogIn_Clicked(object sender, EventArgs e)
+        {
 
+        }
     }
       
 }
