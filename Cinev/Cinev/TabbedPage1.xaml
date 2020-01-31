@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:views="clr-namespace:Cinev.Views"
+            mc:Ignorable="d"
+             x:Class="Cinev.TabbedPage1">
+
+
+    <NavigationPage Title="Upcoming" IconImageSource="">
+        <x:Arguments>
+            <views:UpcomingList />
+        </x:Arguments>
+    </NavigationPage>
+
+
+    <NavigationPage Title="Schedule" IconImageSource="">
+        <x:Arguments>
+            <views:Schedules />
+        </x:Arguments>
+    </NavigationPage>
+
+
+
+    <NavigationPage Title="WishList" IconImageSource="">
+        <x:Arguments>
+            <views:WishList />
+        </x:Arguments>
+    </NavigationPage>
+
+
+
+
+</TabbedPage>

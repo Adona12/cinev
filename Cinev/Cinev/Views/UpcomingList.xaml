@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             mc:Ignorable="d"
+             x:Class="Cinev.Views.UpcomingList"
+             Title="Upcomings"
+             BackgroundColor="#e2e2e2"
+             >
+
+
+    <ContentPage.Content  HeightRequest="320" >
+        <ListView  IsPullToRefreshEnabled="true" RefreshControlColor="Red"  RowHeight="300"  x:Name="umListview" ItemsSource="{Binding upcomings}" ItemTapped="umListview_ItemTapped">
+
+            <ListView.ItemTemplate  HeightRequest="320" >
+
+                <DataTemplate>
+
+                    <ViewCell  >
+                        <yummy:PancakeView Margin="10" 
+                                           Padding="10" 
+                                            BackgroundColor="White" 
+                                            CornerRadius="20" 
+                                            HeightRequest="320" 
+                                            HorizontalOptions="FillAndExpand">
+
+
+
+
+                            <StackLayout MinimumHeightRequest="400" Orientation="Horizontal">
+
+
+                                <yummy:PancakeView
+                                 
+                                        CornerRadius="10" 
+                                       
+                                        HorizontalOptions="Center" 
+                                       
+                                        VerticalOptions="Center" 
+                                       >   
+                                   
+                                   <Image Aspect="AspectFill" Source="{Binding FullPath}" />
+                                </yummy:PancakeView>
+
+
+
+                                <StackLayout Orientation="Horizontal">
+                                    <Label 
+                                            FontSize="18" 
+                                        Margin="0,10,0,0"
+                                            LineBreakMode="NoWrap" 
+                                            Style="{StaticResource headerLabel}" 
+                                            Text="{Binding Title}" />
+
+
+                                    <yummy:PancakeView BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="30" HorizontalOptions="EndAndExpand" WidthRequest="70">
+                                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" VerticalOptions="Center">
+                                            <Label FontFamily="{StaticResource MaterialFontFamily}" FontSize="20" Text="&#xf4ce;" TextColor="#f7b602" />
+                                            <Label FontSize="16" Style="{StaticResource textLabel}" Text="4.5" TextColor="#f7b602" />
+                                        </StackLayout>
+                                    </yummy:PancakeView>
+
+
+                                </StackLayout>
+
+
+
+
+
+
+                            </StackLayout>
+
+
+
+
+
+
+                        </yummy:PancakeView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </ViewCell>
+
+
+
+
+
+
+
+
+
+
+
+
+                </DataTemplate>
+
+
+
+            </ListView.ItemTemplate>
+
+
+
+
+
+
+        </ListView>
+
+
+    </ContentPage.Content>
+</ContentPage>
