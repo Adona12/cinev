@@ -8,7 +8,7 @@ namespace Cinev.Model
     {
 
         public int UserID { get; set; }
-        public Dictionary<int, int> MovisID { get; set; }
+       // public Dictionary<int, int> MovisID { get; set; }
         public int MovieID { get; set; }
       
     }

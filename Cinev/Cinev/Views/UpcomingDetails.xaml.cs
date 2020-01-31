@@ -88,8 +88,8 @@ namespace Cinev.Views
             Dictionary<int, int> nu = new Dictionary<int, int>();
             nu.Add(3, 3);
             WishListHelper wishHelper = new WishListHelper();
-
-
+            List<WishListUser> data = await wishHelper.GetAllWish(1);
+         
                 var label = (Label)sender;
          
            
