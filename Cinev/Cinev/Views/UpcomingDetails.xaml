@@ -16,12 +16,16 @@
           
             <Label x:Name="Title" Margin="40,20,0,10" Style="{StaticResource MovieNameBig}"/>
             <StackLayout Orientation="Horizontal">
-                <Label x:Name="Genres" Margin="40,0,0,10" Style="{StaticResource Genre}"/>
-                <yummy:PancakeView  Margin="0,0,50,0"  VerticalOptions="Center" HorizontalOptions="EndAndExpand"  BindableLayout.ItemsSource="{Binding Icons}" BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="30" WidthRequest="35">
+                <StackLayout Orientation="Vertical">
+                    <Label x:Name="Genres" Margin="40,0,0,10" Style="{StaticResource Genre}"/>
+                    <Label x:Name="Status"  Margin="40,0,0,0" Style="{StaticResource Status}"/>
+                </StackLayout>
+               
+                <yummy:PancakeView  Margin="0,0,50,0"  VerticalOptions="Center" HorizontalOptions="EndAndExpand"  BindableLayout.ItemsSource="{Binding Icons}" BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="40" WidthRequest="40">
                     <Label 
                          x:Name="HeartIcon"
                         FontFamily="{StaticResource MaterialFontFamily}" 
-                        FontSize="30" 
+                        FontSize="37" 
                                     
                         HorizontalOptions="Center"
                         Text="{Binding HeartOutline}" 
@@ -43,7 +47,8 @@
             </StackLayout>
           
             <Label x:Name="OverView" Padding="20"  Style="{StaticResource Description}"/>
-           
+
+
 
         </StackLayout>
     </ContentPage.Content>
