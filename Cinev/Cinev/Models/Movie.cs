@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MovieSchedule.Model
+namespace Cinev.Model
 {
    public  class Movie
     {

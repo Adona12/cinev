@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Cinev.Models;
+using Cinev.Model;
+using Cinev.Helper;
 
 namespace Cinev.Views
 {
@@ -75,27 +77,36 @@ namespace Cinev.Views
 
        public static bool full = false;
 
-        void OnTapGestureRecognizerTapped(object sender, EventArgs args)
+       async void OnTapGestureRecognizerTapped(object sender, EventArgs args)
+       
         {
+            WishListUser wishList = new WishListUser();
+
+            wishList.MovieID = globalID;
+            wishList.UserID = 1;
+            Dictionary<int, int> nu = new Dictionary<int, int>();
+            nu.Add(3, 3);
+            WishListHelper wishHelper = new WishListHelper();
 
 
-            
-            var label = (Label)sender;
+                var label = (Label)sender;
          
            
             if (full)
             {
+              await  wishHelper.DeleteWishList(1, globalID);
                 label.Text = HeartOutline;
                 full = false;
+               
                 //globalID
 
             }
             else
             {
-
+                await wishHelper.AddWishList(wishList);
                 label.Text = Heart;
                 full = true;
-                //globalID
+              
             }
         }
     }

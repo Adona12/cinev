@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MovieSchedule.Model
+namespace Cinev.Model
 {
-    public class WishList
+    public class WishListUser
     {
+
         public int UserID { get; set; }
-        //     public Dictionary<int, int> MovieID { get; set; }
+        public Dictionary<int, int> MovisID { get; set; }
         public int MovieID { get; set; }
+      
     }
 }
