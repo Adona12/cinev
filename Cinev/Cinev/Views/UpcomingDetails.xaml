@@ -7,16 +7,38 @@
              mc:Ignorable="d"
              x:Class="Cinev.Views.UpcomingDetails">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout >
 
                                
                                     
                 <Image  HeightRequest="230" x:Name="MovieImage"   />
           
           
-            <Label x:Name="Title" Margin="40,20,0,30" Style="{StaticResource MovieNameBig}"/>
-            <Label x:Name="OverView" Padding="10"  Style="{StaticResource Description}"/>
-            <Button x:Name="AddToWish" Text="Add" Clicked="AddToWish_Clicked" />
+            <Label x:Name="Title" Margin="40,20,0,10" Style="{StaticResource MovieNameBig}"/>
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="Genres" Margin="40,0,0,10" Style="{StaticResource SubText}"/>
+                <yummy:PancakeView  Margin="0,0,50,0"  VerticalOptions="Center" HorizontalOptions="EndAndExpand"  BindableLayout.ItemsSource="{Binding Icons}" BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="30" WidthRequest="35">
+                                <Label 
+                                    x:Name="HeartIcon"
+                                    
+                                    
+                        FontFamily="{StaticResource MaterialFontFamily}" 
+                        FontSize="30" 
+                                    
+                        HorizontalOptions="Center"
+                        Text="{Binding HeartOutline}" 
+                        TextColor="#ff4545" 
+                                  
+                        VerticalOptions="Center" />  
+                    
+                    
+                </yummy:PancakeView>
+
+
+            </StackLayout>
+          
+            <Label x:Name="OverView" Padding="20,10,10,10"  Style="{StaticResource Description}"/>
+           
 
         </StackLayout>
     </ContentPage.Content>

@@ -14,11 +14,29 @@ namespace Cinev.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class UpcomingDetails : ContentPage
     {
-        public UpcomingDetails(Upcoming upcoming)
+        public class IconFont
         {
+            public string Heart { get; set; }
+           public string HeartOutline { get; set; }
+
+            public IconFont(string s,string s2)
+            {
+                Heart = s;
+                HeartOutline = s2;
+            }
+
+            
+
+        }
+      
+        public const string HeartOutline = "\uf2d5";
+        public const string Heart = "\uf2d1";
+        public UpcomingDetails(Upcoming upcoming){
+            BindingContext = new IconFont("\uf2d1", "\uf2d5");
 
 
             InitializeComponent();
+           
 
             using (var webClient = new WebClient())
 
@@ -30,15 +48,20 @@ namespace Cinev.Views
 
                 var r = MUpcomingDetails.FromJson(jsonString);
 
-                Title.Text = upcoming.Title;
+                Title.Text = r.Title;
 
                 MovieImage.Source = new UriImageSource()
                 {
 
-                    Uri = new Uri(upcoming.FullBackPath)
+                    Uri = new Uri(r.FullBackPath)
 
                 };
-                OverView.Text = upcoming.Overview;
+                OverView.Text = r.Overview;
+                string concat="";
+                foreach (Genre g in r.Genres) {
+                    concat += g.Name + " | ";
+                }
+                Genres.Text=concat;
 
 
 

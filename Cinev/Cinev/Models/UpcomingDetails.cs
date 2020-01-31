@@ -15,7 +15,7 @@ namespace Cinev.Models
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class UpcomingDetails
+    public partial class MUpcomingDetails
     {
         [JsonProperty("adult")]
         public bool Adult { get; set; }
@@ -56,6 +56,9 @@ namespace Cinev.Models
         [JsonProperty("status")]
         public string Status { get; set; }
 
+        public string FullBackPath { get { return "http://image.tmdb.org/t/p/w500" + BackdropPath; } }
+
+
         [JsonProperty("tagline")]
         public string Tagline { get; set; }
 
@@ -93,14 +96,14 @@ namespace Cinev.Models
         public string OriginCountry { get; set; }
     }
 
-    public partial class UpcomingDetails
+    public partial class MUpcomingDetails
     {
-        public static UpcomingDetails FromJson(string json) => JsonConvert.DeserializeObject<UpcomingDetails>(json, Cinev.Converter.Settings);
+        public static MUpcomingDetails FromJson(string json) => JsonConvert.DeserializeObject<MUpcomingDetails>(json, Cinev.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this UpcomingDetails self) => JsonConvert.SerializeObject(self, Cinev.Converter.Settings);
+        public static string ToJson(this MUpcomingDetails self) => JsonConvert.SerializeObject(self, Cinev.Converter.Settings);
     }
 
     internal static class Converter
