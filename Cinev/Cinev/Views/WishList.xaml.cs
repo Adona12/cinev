@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinev.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,17 @@ namespace Cinev.Views
         public WishList()
         {
             InitializeComponent();
+            BindingContext = new WishListViewModel();
         }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            BindingContext = new WishListViewModel();
+
+        }
+
+
+
+
     }
 }

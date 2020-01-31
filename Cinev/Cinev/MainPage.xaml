@@ -5,13 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="Cinev.MainPage">
-    <ContentPage.Content>
-
-
-
-
-
-    </ContentPage.Content>
-   
+    
+     
 
 </ContentPage>
