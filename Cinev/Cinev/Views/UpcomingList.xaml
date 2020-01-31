@@ -51,14 +51,14 @@
                                             FontSize="18" 
                                         Margin="0,10,0,0"
                                             LineBreakMode="NoWrap" 
-                                            Style="{StaticResource headerLabel}" 
+                                            Style="{StaticResource MovieName}" 
                                             Text="{Binding Title}" />
 
 
                                     <yummy:PancakeView BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="30" HorizontalOptions="EndAndExpand" WidthRequest="70">
                                         <StackLayout HorizontalOptions="Center" Orientation="Horizontal" VerticalOptions="Center">
                                             <Label FontFamily="{StaticResource MaterialFontFamily}" FontSize="20" Text="&#xf4ce;" TextColor="#f7b602" />
-                                            <Label FontSize="16" Style="{StaticResource textLabel}" Text="4.5" TextColor="#f7b602" />
+                                            <Label FontSize="16" Style="{StaticResource LightFont}" Text="4.5" TextColor="#f7b602" />
                                         </StackLayout>
                                     </yummy:PancakeView>
 
