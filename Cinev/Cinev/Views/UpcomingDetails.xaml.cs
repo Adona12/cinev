@@ -29,8 +29,8 @@ namespace Cinev.Views
 
         }
       
-        public const string HeartOutline = "\uf2d5";
-        public const string Heart = "\uf2d1";
+        public static  string HeartOutline = "\uf2d5";
+        public static  string Heart = "\uf2d1";
         public UpcomingDetails(Upcoming upcoming){
             BindingContext = new IconFont("\uf2d1", "\uf2d5");
 
@@ -61,7 +61,8 @@ namespace Cinev.Views
                 foreach (Genre g in r.Genres) {
                     concat += g.Name + " | ";
                 }
-                Genres.Text=concat;
+                string sub = concat.Substring(0, concat.Length - 2);
+                Genres.Text=sub;
 
 
 
@@ -71,11 +72,23 @@ namespace Cinev.Views
 
         }
 
-    
+       public static bool full = false;
 
-        private void AddToWish_Clicked(object sender, EventArgs e)
+        void OnTapGestureRecognizerTapped(object sender, EventArgs args)
         {
-
+            
+            var label = (Label)sender;
+           
+            if (full)
+            {
+                label.Text = HeartOutline;
+                full = false;
+            }
+            else
+            {
+                label.Text = Heart;
+                full = true;
+            }
         }
     }
 }

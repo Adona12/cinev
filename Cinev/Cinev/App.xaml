@@ -44,6 +44,12 @@
             <Setter Property="FontSize" Value="14" />
             <Setter Property="TextColor" Value="{StaticResource MainTextColor}" />
         </Style>
+        <Style x:Key="Genre" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource SubTextColor}" />
+        </Style>
+
 
         <Style x:Key="Description" TargetType="Label">
             <Setter Property="FontFamily" Value="{StaticResource LightFont}" />
