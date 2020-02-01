@@ -23,7 +23,7 @@ namespace Cinev.Views
 
         private async void umListview_ItemTapped(Object sender, ItemTappedEventArgs e) {
             var details = e.Item as Upcoming;
-            await Navigation.PushAsync(new UpcomingDetails(details));
+            await Navigation.PushAsync(new UpcomingDetails((int)details.Id));
         
         
         } 

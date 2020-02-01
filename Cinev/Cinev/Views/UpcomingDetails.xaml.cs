@@ -35,9 +35,9 @@ namespace Cinev.Views
         public static  string HeartOutline = "\uf2d5";
         public static  string Heart = "\uf2d1";
         MUpcomingDetails r;
-        public UpcomingDetails(Upcoming upcoming){
+        public UpcomingDetails(int upcomingId){
             BindingContext = new IconFont("\uf2d1", "\uf2d5");
-            globalID = (int)upcoming.Id;
+            globalID = (int)upcomingId;
 
 
             InitializeComponent();
@@ -47,7 +47,7 @@ namespace Cinev.Views
 
             {
                 string s = "https://api.themoviedb.org/3/movie/429617?api_key=f4b8e415cb9ab402e5c1d72176cab35b";
-                string mid = Convert.ToString(upcoming.Id);
+                string mid = Convert.ToString(upcomingId);
                 string jsonString = webClient.DownloadString("https://api.themoviedb.org/3/movie/" + mid + "?api_key=f4b8e415cb9ab402e5c1d72176cab35b");
 
 
@@ -99,7 +99,13 @@ namespace Cinev.Views
 
        public  bool full = false;
 
-       async void OnTapGestureRecognizerTapped(object sender, EventArgs args)
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            checkIfFavourite();
+        }
+
+        async void OnTapGestureRecognizerTapped(object sender, EventArgs args)
        
         {
             WishListUser wishList = new WishListUser();

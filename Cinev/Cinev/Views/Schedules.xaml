@@ -19,7 +19,7 @@
            FontSize="Medium"
            FontAttributes="Italic" />
 
-            <ListView    RowHeight="150" x:Name="searchResults" >
+            <ListView   ItemTapped="searchResults_ItemTapped"  RowHeight="150" x:Name="searchResults" >
 
                 <ListView.ItemTemplate  HeightRequest="200" >
 
@@ -31,22 +31,65 @@
                                            Padding="10" 
                                             BackgroundColor="White" 
                                             CornerRadius="20" 
-                                            HeightRequest="150" 
+                                            HeightRequest="320" 
                                             HorizontalOptions="FillAndExpand">
-                                <StackLayout>
 
-                                    <BoxView Margin="20,0" BackgroundColor="LightGray" HeightRequest="0.5" />
-                                    <StackLayout Margin="20" Orientation="Horizontal">
-                                        <Label FontSize="30" Style="{StaticResource MovieName}" Text="{Binding Title}" />
+
+
+
+                                <StackLayout MinimumHeightRequest="400" Orientation="Horizontal">
+
+
+                                    <yummy:PancakeView
+                                 
+                                        CornerRadius="10" 
+                                       
+                                        HorizontalOptions="Center" 
+                                    Margin="0,0,20,0"
+                                       
+                                        VerticalOptions="Center" 
+                                       >
+
+                                        <Image  Aspect="AspectFill" Source="{Binding FullPath}" />
+                                    </yummy:PancakeView>
+
+
+
+                                    <StackLayout WidthRequest="170" Spacing="20" Orientation="Vertical">
+                                        <Label 
+                                            FontSize="18" 
+                                        Margin="5,10,0,0"
+                                            LineBreakMode="NoWrap" 
+                                            Style="{StaticResource MovieName}" 
+                                            Text="{Binding Title}" />
+
+
+                                        <yummy:PancakeView BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="30" HorizontalOptions="StartAndExpand" WidthRequest="70">
+                                            <StackLayout HorizontalOptions="Center" Orientation="Horizontal" VerticalOptions="Center">
+                                                <Label FontFamily="{StaticResource MaterialFontFamily}" FontSize="20" Text="&#xf4ce;" TextColor="#f7b602" />
+                                                <Label FontSize="16" Style="{StaticResource Rating}" Text="{Binding VoteAverage}" TextColor="#f7b602" />
+                                            </StackLayout>
+                                        </yummy:PancakeView>
+
+                                        
+
 
                                     </StackLayout>
+
+
+
+
 
 
                                 </StackLayout>
 
 
 
+
+
+
                             </yummy:PancakeView>
+
 
 
 

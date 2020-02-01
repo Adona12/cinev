@@ -32,7 +32,7 @@
             />
 
             <Button
-            Text="Enter"
+            Text="Log in"
            Clicked="LogInButton"
             Margin="60, 40"
             BackgroundColor="#4682B4"

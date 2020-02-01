@@ -52,5 +52,10 @@ namespace Cinev.Views
             }
         }
 
+        private async void login_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Login());
+
+        }
     }
 }

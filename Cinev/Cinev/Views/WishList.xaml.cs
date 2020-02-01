@@ -36,6 +36,7 @@ namespace Cinev.Views
             if (answer) {
                 await wishHelper.DeleteWishList("Adona", x);
                 await DisplayAlert("Message", "The item has been deleted", "OK");
+                BindingContext = new WishListViewModel();
 
             }
 
