@@ -10,11 +10,11 @@
 
         <StackLayout>
 
-            <SearchBar Placeholder="Search items..."
+            <SearchBar Placeholder="Search movies..."
            CancelButtonColor="Orange"
            PlaceholderColor="Orange"
            TextColor="Orange"
-                   TextChanged="SearchBar_TextChanged"
+           TextChanged="SearchBar_TextChanged"
            HorizontalTextAlignment="Center"
            FontSize="Medium"
            FontAttributes="Italic" />
