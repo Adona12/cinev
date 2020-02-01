@@ -14,8 +14,15 @@
         </x:Arguments>
     </NavigationPage>
 
+    <NavigationPage Title="WishList" IconImageSource="">
+        <x:Arguments>
+            <views:WishList />
+        </x:Arguments>
+    </NavigationPage>
 
-    <NavigationPage Title="Schedule" IconImageSource="">
+
+
+    <NavigationPage Title="Search" IconImageSource="">
         <x:Arguments>
             <views:Schedules />
         </x:Arguments>
@@ -23,11 +30,6 @@
 
 
 
-    <NavigationPage Title="WishList" IconImageSource="">
-        <x:Arguments>
-            <views:WishList />
-        </x:Arguments>
-    </NavigationPage>
 
 
 
