@@ -14,17 +14,17 @@
         Margin="20">
 
             <Label
-            Text="Cinev"
+            Text="Log In"
             HorizontalOptions="Center"
                 Style="{StaticResource Login}"
-            TextColor="#4682B4"
+            TextColor="#ffffff"
             FontSize="35"
             Margin="0, 20"
             />
 
 
             <yummy:PancakeView Margin="10" 
-                                           Padding="10,0,0,0" 
+                                           Padding="10,0,10,0" 
                                              BackgroundColor="#1e2040"
                                             CornerRadius="30" 
                                             HeightRequest="50" 
@@ -33,11 +33,12 @@
             Placeholder="E-mail"
             Keyboard="Email"
             x:Name="EmailInput"
+                     TextColor="#d1d1d1"
             />
             </yummy:PancakeView>
 
             <yummy:PancakeView Margin="10" 
-                                           Padding="10,0,0,0" 
+                                           Padding="10,0,10,0" 
                                              BackgroundColor="#1e2040"
                                             CornerRadius="30" 
                                             HeightRequest="50" 
@@ -45,7 +46,9 @@
 
                 <Entry
             Placeholder="Password"
+                    
             IsPassword="true"
+                     TextColor="#d1d1d1"
             x:Name="PasswordInput"
             />
             </yummy:PancakeView>
@@ -53,10 +56,11 @@
             <Button
             Text="Log in"
            Clicked="LogInButton"
-            Margin="60, 40"
+            Margin="60, 25"
+                 Style="{StaticResource Buttons}"
           
                     BorderRadius="35"
-                BackgroundColor="#d68f0b"
+                BackgroundColor="#422057"
             TextColor="White"
             />
 

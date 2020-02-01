@@ -16,7 +16,7 @@
         Margin="20">
 
             <Label
-            Text="Cinev"
+            Text="Sign Up"
             HorizontalOptions="Center"
                 Style="{StaticResource Login}"
             TextColor="#ffffff"
@@ -24,14 +24,14 @@
             Margin="0, 20"
             />
             <yummy:PancakeView Margin="10" 
-                                           Padding="10,0,0,0" 
+                                           Padding="10,0,10,0" 
                                              BackgroundColor="#1e2040"
                                             CornerRadius="30" 
                                             HeightRequest="50" 
                                             HorizontalOptions="FillAndExpand">
                 <Entry
               
-               
+                TextColor="#d1d1d1"
                 
             Placeholder="Full Name"
             Keyboard="Text"
@@ -40,7 +40,7 @@
             </yummy:PancakeView>
 
             <yummy:PancakeView Margin="10" 
-                                           Padding="10,0,0,0" 
+                                           Padding="10,0,10,0" 
                                              BackgroundColor="#1e2040"
                                             CornerRadius="30" 
                                             HeightRequest="50" 
@@ -48,7 +48,7 @@
 
                 <Entry
                 
-                
+                 TextColor="#d1d1d1"
             Placeholder="E-mail"
             Keyboard="Email"
             x:Name="EmailInput"
@@ -56,7 +56,7 @@
             </yummy:PancakeView>
 
             <yummy:PancakeView Margin="10" 
-                                           Padding="10,0,0,0" 
+                                           Padding="10,0,10,0" 
                                              BackgroundColor="#1e2040"
                                             CornerRadius="30" 
                                             HeightRequest="50" 
@@ -65,6 +65,7 @@
                 <Entry
                 TextColor="#d1d1d1"
             Placeholder="Password"
+                    
             IsPassword="true"
             x:Name="PasswordInput"
             />
@@ -73,8 +74,9 @@
             Text="Sign up"
            Clicked="SignupButton"
             Margin="30, 30"
-            BackgroundColor="#d68f0b"
+            BackgroundColor="#606060"
             TextColor="White"
+                 Style="{StaticResource Buttons}"
                BorderRadius="35"
             />
 
@@ -83,8 +85,9 @@
                x:Name="login"
                 Clicked="login_Clicked"
     BorderRadius="35"
-                BackgroundColor="#d68f0b"
+                BackgroundColor="#422057"
             Margin="60, 0"
+                Style="{StaticResource Buttons}"
             
             TextColor="White"
             />
