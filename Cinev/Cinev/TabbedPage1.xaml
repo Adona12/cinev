@@ -5,7 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
             xmlns:views="clr-namespace:Cinev.Views"
             mc:Ignorable="d"
-             x:Class="Cinev.TabbedPage1">
+             x:Class="Cinev.TabbedPage1"
+             NavigationPage.HasNavigationBar="false">
 
 
     <NavigationPage Title="Upcoming" IconImageSource="">

@@ -6,10 +6,10 @@
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="Cinev.Views.WishList">
-    <ContentPage.Content  HeightRequest="150" >
-        <ListView x:Name="Lists" IsPullToRefreshEnabled="true" RefreshControlColor="Red"  RowHeight="150"  ItemsSource="{Binding details}" >
+    <ContentPage.Content  HeightRequest="120" >
+        <ListView x:Name="Lists" IsPullToRefreshEnabled="true" RefreshControlColor="Red"  RowHeight="120"  ItemsSource="{Binding details}" >
 
-            <ListView.ItemTemplate  HeightRequest="200" >
+            <ListView.ItemTemplate  HeightRequest="120" >
 
                 <DataTemplate>
 
@@ -21,14 +21,15 @@
                                            Padding="10" 
                                             BackgroundColor="White" 
                                             CornerRadius="20" 
-                                            HeightRequest="150" 
+                                            HeightRequest="120" 
                                             HorizontalOptions="FillAndExpand">
                             <StackLayout>
 
                                 <BoxView Margin="20,0" BackgroundColor="LightGray" HeightRequest="0.5" />
-                                <StackLayout Margin="20" Orientation="Horizontal">
-                                    <Label FontSize="30" Style="{StaticResource MovieName}" Text="{Binding Title}" />
-                                   
+                                <StackLayout Margin="20" Orientation="Vertical">
+                                    <Label FontSize="20" Style="{StaticResource MovieName}" Text="{Binding Title}" />
+                                    <Label x:Name="status" Text="{Binding Status}" Margin="10,0,0,0" Style="{StaticResource Status}"/>
+
                                 </StackLayout>
 
 

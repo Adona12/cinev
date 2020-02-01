@@ -34,5 +34,5 @@
   </style>
 
   <color name="ListViewSelected">#e2e2e2e2</color>
-  <color name="ListViewHighlighted">#E39696</color>
+  <color name="ListViewHighlighted">#e2e2e2e2</color>
 </resources>

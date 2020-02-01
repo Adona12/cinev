@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="Cinev.Views.Signup">
+             x:Class="Cinev.Views.Signup"
+              NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout
         VerticalOptions="Center"
@@ -36,12 +37,23 @@
             />
 
             <Button
-            Text="Enter"
+            Text="Sign up"
            Clicked="SignupButton"
             Margin="60, 40"
             BackgroundColor="#4682B4"
             TextColor="White"
             />
+
+            <Button
+            Text="Log in"
+               x:Name="login"
+                Clicked="login_Clicked"
+   
+            Margin="60, 40"
+            BackgroundColor="#4682B4"
+            TextColor="White"
+            />
+
 
         </StackLayout>
     </ContentPage.Content>

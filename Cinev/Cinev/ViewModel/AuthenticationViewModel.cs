@@ -10,7 +10,7 @@ namespace Cinev.ViewModel
 {
     public class AuthenticationViewModel
     {
-        static string LoggedinUser = "";
+        public static string LoggedinUser { get; set; }
         public static async Task<bool> checkUser(string email,string password)
         {
             UserHelper userhelp = new UserHelper();

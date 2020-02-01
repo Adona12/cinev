@@ -18,8 +18,11 @@ namespace Cinev.Views
         {
             InitializeComponent();
         }
+        // await Navigation.PushAsync(new Login());
 
-      async private void SignupButton(object sender, EventArgs e)
+
+
+        async private void SignupButton(object sender, EventArgs e)
         {
             UserHelper userhelp = new UserHelper();
             var email = EmailInput.Text;
@@ -35,17 +38,27 @@ namespace Cinev.Views
 
                 if (user != null)
                 {
+
                     
                         await DisplayAlert("Alert", "Email already exists", "OK");
-                    }
                  
-                
+                }
+
+
+
                 else
                 {
                     _ = userhelp.AddUser(email, password, name);
+                    await Navigation.PushAsync(new Login());
                 }
 
             }
+        }
+
+        private async void login_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Login());
+
         }
     }
 }

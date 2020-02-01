@@ -1,5 +1,6 @@
 ﻿using Cinev.Helper;
 using Cinev.Models;
+using Cinev.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,17 +31,19 @@ namespace Cinev.Views
             }
             else
             {
+                bool answer = await AuthenticationViewModel.checkUser(email, password);
 
-                Users user = await userhelp.GetUser(email);
-                if (user==null||user.Password!=password|| user.Email!=email)
+              
+                if (answer)
                 {
-                    await DisplayAlert("Alert", "Autheentication failed", "OK");
+                    await DisplayAlert("Alert", "Authentication failed", "OK");
                     EmailInput.Text = "";
                     PasswordInput.Text = "";
                 }
                 else
                 {
-                    await DisplayAlert("Alert", "passed", "OK");
+                    //await DisplayAlert("Alert", "passed", "OK");
+                    await Navigation.PushAsync(new TabbedPage1());
                 }
 
             }

@@ -34,8 +34,9 @@ namespace Cinev.Views
           int x = (int)((MUpcomingDetails)mi.CommandParameter).Id;
             bool answer = await DisplayAlert("Question?", "Are you sure you want to remove this item", "Yes", "No");
             if (answer) {
-                await wishHelper.DeleteWishList("Adona", x);
+                await wishHelper.DeleteWishList(AuthenticationViewModel.LoggedinUser, x);
                 await DisplayAlert("Message", "The item has been deleted", "OK");
+                BindingContext = new WishListViewModel();
 
             }
 

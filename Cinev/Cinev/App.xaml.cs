@@ -13,12 +13,21 @@ namespace Cinev
 
 
             // MainPage = new MainPage();
-            //   MainPage = new NavigationPage(new UpcomingList());
+            //  MainPage = new NavigationPage(new UpcomingList());
+            MainPage = new NavigationPage(new Signup());
+
 
            //MainPage = new TabbedPage1();
             MainPage  =new Signup();
           //  MainPage = new Login();
            //   MainPage = new TabbedPage1();
+
+
+            //   MainPage = new TabbedPage1();
+            //      MainPage = new Signup();
+            //  MainPage = new Login();
+            // MainPage = new TabbedPage1();
+
 
         }
 

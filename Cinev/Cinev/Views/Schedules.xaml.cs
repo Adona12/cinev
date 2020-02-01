@@ -67,5 +67,14 @@ namespace Cinev.Views
                 
 
         }
+
+    
+
+        private async void searchResults_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var details = e.Item as SearchResult;
+            await Navigation.PushAsync(new UpcomingDetails((int)details.Id));
+
+        }
     }
 }
