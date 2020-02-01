@@ -18,7 +18,7 @@ namespace Cinev
 
 
            //MainPage = new TabbedPage1();
-            MainPage  =new Signup();
+          //  MainPage  =new Signup();
           //  MainPage = new Login();
            //   MainPage = new TabbedPage1();
 
