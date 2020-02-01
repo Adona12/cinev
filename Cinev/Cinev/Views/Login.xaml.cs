@@ -22,7 +22,7 @@ namespace Cinev.Views
 
         async private void LogInButton(object sender, EventArgs e)
         {
-            UserHelper userhelp = new UserHelper();
+         
             var email = EmailInput.Text;
             var password = PasswordInput.Text;
            if (string.IsNullOrWhiteSpace(email) || (string.IsNullOrWhiteSpace(password)))
