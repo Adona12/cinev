@@ -55,9 +55,15 @@ namespace Cinev.Views
         {
             
             SearchBar searchBar = (SearchBar)sender;
-            if (searchBar.Text != " " && searchBar.Text != "" && searchBar.Text != null) {
+            if (searchBar.Text != " " && searchBar.Text != "" && searchBar.Text != null)
+            {
                 searchResults.ItemsSource = GetSearchResults(searchBar.Text);
             }
+            else {
+
+                searchResults.ItemsSource=new ObservableCollection<SearchResult>();
+            }
+
                 
 
         }
