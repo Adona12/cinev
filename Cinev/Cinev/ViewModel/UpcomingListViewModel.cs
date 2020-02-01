@@ -17,7 +17,7 @@ namespace Cinev.ViewModel
 
             using (var webClient = new WebClient())
             {
-                string jsonString = webClient.DownloadString("https://api.themoviedb.org/3/movie/upcoming?api_key=f4b8e415cb9ab402e5c1d72176cab35b");
+                string jsonString =  webClient.DownloadString("https://api.themoviedb.org/3/movie/upcoming?api_key=f4b8e415cb9ab402e5c1d72176cab35b");
                 Console.WriteLine(jsonString);
 
                 var r = Upcoming.FromJson(jsonString);
@@ -35,6 +35,7 @@ namespace Cinev.ViewModel
 
 
         }
+
 
     }
 }
