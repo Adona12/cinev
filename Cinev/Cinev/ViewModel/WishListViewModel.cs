@@ -28,7 +28,7 @@ namespace Cinev.ViewModel
 
         public  async void retriveWish() {
             WishListHelper wishHelper = new WishListHelper();
-            List<WishListUser> data = await wishHelper.GetAllWish("Adona");
+            List<WishListUser> data = await wishHelper.GetAllWish(AuthenticationViewModel.LoggedinUser);
             foreach (WishListUser wlu in data) {
                 using (var webClient = new WebClient())
 
