@@ -1,4 +1,7 @@
-﻿using Cinev.ViewModel;
+﻿
+using Cinev.Helper;
+using Cinev.Models;
+using Cinev.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +27,21 @@ namespace Cinev.Views
             BindingContext = new WishListViewModel();
 
         }
+        public async void OnDelete(object sender, EventArgs e)
+        {
+            WishListHelper wishHelper = new WishListHelper();
+            var mi = ((MenuItem)sender);
+          int x = (int)((MUpcomingDetails)mi.CommandParameter).Id;
+            bool answer = await DisplayAlert("Question?", "Are you sure you want to remove this item", "Yes", "No");
+            if (answer) {
+                await wishHelper.DeleteWishList("Adona", x);
+                await DisplayAlert("Message", "The item has been deleted", "OK");
 
+            }
+
+
+
+        }
 
 
 

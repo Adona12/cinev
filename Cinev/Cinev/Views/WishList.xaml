@@ -7,7 +7,7 @@
              mc:Ignorable="d"
              x:Class="Cinev.Views.WishList">
     <ContentPage.Content  HeightRequest="150" >
-        <ListView  IsPullToRefreshEnabled="true" RefreshControlColor="Red"  RowHeight="150"  ItemsSource="{Binding details}" >
+        <ListView x:Name="Lists" IsPullToRefreshEnabled="true" RefreshControlColor="Red"  RowHeight="150"  ItemsSource="{Binding details}" >
 
             <ListView.ItemTemplate  HeightRequest="200" >
 
@@ -15,7 +15,9 @@
 
                     <ViewCell >
 
-                        <yummy:PancakeView Margin="10" 
+                       
+
+                            <yummy:PancakeView Margin="10" 
                                            Padding="10" 
                                             BackgroundColor="White" 
                                             CornerRadius="20" 
@@ -36,8 +38,14 @@
 
                         </yummy:PancakeView>
 
-                        
 
+
+                        <ViewCell.ContextActions>
+
+                            <MenuItem Clicked="OnDelete"
+                      CommandParameter="{Binding .}"
+                      Text="Delete" IsDestructive="True"  />
+                        </ViewCell.ContextActions>
 
 
                     </ViewCell>
