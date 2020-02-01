@@ -83,7 +83,7 @@ namespace Cinev.Views
 
         public async void checkIfFavourite() {
             WishListHelper wishHelper = new WishListHelper();
-            List<WishListUser> data = await wishHelper.GetAllWish("Adona");
+            List<WishListUser> data = await wishHelper.GetAllWish(AuthenticationViewModel.LoggedinUser);
             foreach (WishListUser wlu in data) {
                 if (wlu.MovieID == globalID) {
                     HeartIcon.Text = Heart;
@@ -110,16 +110,16 @@ namespace Cinev.Views
         {
             WishListUser wishList = new WishListUser();
             wishList.MovieID = globalID;
-            wishList.Email = "Adona";
+            wishList.Email = AuthenticationViewModel.LoggedinUser;
           
             WishListHelper wishHelper = new WishListHelper();
-            List<WishListUser> data = await wishHelper.GetAllWish("Adona");
+            List<WishListUser> data = await wishHelper.GetAllWish(AuthenticationViewModel.LoggedinUser);
 
          
                 var label = (Label)sender;
             if (full)
             {
-              await  wishHelper.DeleteWishList("Adona", globalID);
+              await  wishHelper.DeleteWishList(AuthenticationViewModel.LoggedinUser, globalID);
                 label.Text = HeartOutline;
                 full = false;
               

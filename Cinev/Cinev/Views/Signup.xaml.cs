@@ -39,8 +39,11 @@ namespace Cinev.Views
                 if (user != null)
                 {
 
-                    await DisplayAlert("Alert", "Email already exists", "OK");
+                    
+                        await DisplayAlert("Alert", "Email already exists", "OK");
+                 
                 }
+
 
 
                 else
