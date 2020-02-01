@@ -3,39 +3,60 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="Cinev.Views.Login"
-              NavigationPage.HasNavigationBar="false">
+              NavigationPage.HasNavigationBar="false"
+              BackgroundColor="#02031a">
     <ContentPage.Content>
         <StackLayout
         VerticalOptions="Center"
         Margin="20">
 
             <Label
-            Text="cinev park"
+            Text="Cinev"
             HorizontalOptions="Center"
+                Style="{StaticResource Login}"
             TextColor="#4682B4"
             FontSize="35"
             Margin="0, 20"
             />
 
-            <Entry
+
+            <yummy:PancakeView Margin="10" 
+                                           Padding="10,0,0,0" 
+                                             BackgroundColor="#1e2040"
+                                            CornerRadius="30" 
+                                            HeightRequest="50" 
+                                            HorizontalOptions="FillAndExpand">
+                <Entry
             Placeholder="E-mail"
             Keyboard="Email"
             x:Name="EmailInput"
             />
+            </yummy:PancakeView>
 
-            <Entry
+            <yummy:PancakeView Margin="10" 
+                                           Padding="10,0,0,0" 
+                                             BackgroundColor="#1e2040"
+                                            CornerRadius="30" 
+                                            HeightRequest="50" 
+                                            HorizontalOptions="FillAndExpand">
+
+                <Entry
             Placeholder="Password"
             IsPassword="true"
             x:Name="PasswordInput"
             />
+            </yummy:PancakeView>
 
             <Button
             Text="Log in"
            Clicked="LogInButton"
             Margin="60, 40"
-            BackgroundColor="#4682B4"
+          
+                    BorderRadius="35"
+                BackgroundColor="#d68f0b"
             TextColor="White"
             />
 
