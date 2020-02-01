@@ -56,6 +56,22 @@ namespace Cinev.Helper
                 return null;
             }
         }
+        public async Task<Users> GetUser(string email,string password)
+        {
+            try
+            {
+                var allUsers = await GetAllUser();
+                await firebase
+                .Child("Users")
+                .OnceAsync<Users>();
+                return allUsers.Where(a => a.Email == email && a.Password==password).FirstOrDefault();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine($"Error:{e}");
+                return null;
+            }
+        }
 
         //Inser a user
         public async Task<bool> AddUser(string email,string password,string fullName)

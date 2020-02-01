@@ -20,39 +20,39 @@ namespace Cinev.Helper
             await firebase
               .Child("WishLists").PostAsync(wish);
         }
-        public async Task<List<WishListUser>> GetAllWish(int userID)
+        public async Task<List<WishListUser>> GetAllWish(string userID)
         {
 
             return (await firebase
             .Child("WishLists")
           .OnceAsync<WishListUser>()).Select(item => new WishListUser()
           {
-              UserID = item.Object.UserID,
+              Email = item.Object.Email,
               MovieID = item.Object.MovieID
             
 
-          }).Where(a => a.UserID == userID).ToList();
+          }).Where(a => a.Email == userID).ToList();
         }
-        public async Task<List<WishListUser>> CheckMovieExists(int userID,int movieId)
+        public async Task<List<WishListUser>> CheckMovieExists(string userID,int movieId)
         {
 
             return (await firebase
             .Child("WishLists")
           .OnceAsync<WishListUser>()).Select(item => new WishListUser()
           {
-              UserID = item.Object.UserID,
+              Email = item.Object.Email,
               MovieID = item.Object.MovieID
 
 
-          }).Where(a => a.UserID == userID&&a.MovieID==movieId).ToList();
+          }).Where(a => a.Email == userID&&a.MovieID==movieId).ToList();
         }
 
 
-        public async Task DeleteWishList(int userID, int movieID)
+        public async Task DeleteWishList(string userID, int movieID)
         {
             var toDeleteWish = (await firebase
               .Child("WishLists")
-              .OnceAsync<WishListUser>()).Where(a => a.Object.UserID == userID && a.Object.MovieID == movieID).FirstOrDefault();
+              .OnceAsync<WishListUser>()).Where(a => a.Object.Email == userID && a.Object.MovieID == movieID).FirstOrDefault();
             await firebase.Child("WishLists").Child(toDeleteWish.Key).DeleteAsync();
 
         }

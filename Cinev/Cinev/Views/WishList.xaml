@@ -6,84 +6,37 @@
              xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="Cinev.Views.WishList">
-    <ContentPage.Content  HeightRequest="320" >
-        <ListView  IsPullToRefreshEnabled="true" RefreshControlColor="Red"  RowHeight="300"  ItemsSource="{Binding upcomings}" >
+    <ContentPage.Content  HeightRequest="150" >
+        <ListView  IsPullToRefreshEnabled="true" RefreshControlColor="Red"  RowHeight="150"  ItemsSource="{Binding details}" >
 
-            <ListView.ItemTemplate  HeightRequest="320" >
+            <ListView.ItemTemplate  HeightRequest="200" >
 
                 <DataTemplate>
 
                     <ViewCell >
+
                         <yummy:PancakeView Margin="10" 
                                            Padding="10" 
                                             BackgroundColor="White" 
                                             CornerRadius="20" 
-                                            HeightRequest="320" 
+                                            HeightRequest="150" 
                                             HorizontalOptions="FillAndExpand">
+                            <StackLayout>
 
-
-
-
-                            <StackLayout MinimumHeightRequest="400" Orientation="Horizontal">
-
-
-                                <yummy:PancakeView
-                                 
-                                        CornerRadius="10" 
-                                       
-                                        HorizontalOptions="Center" 
-                                    Margin="0,0,20,0"
-                                       
-                                        VerticalOptions="Center" 
-                                       >
-
-                                    <Image  Aspect="AspectFill" Source="{Binding FullPath}" />
-                                </yummy:PancakeView>
-
-
-
-                                <StackLayout WidthRequest="170" Spacing="20" Orientation="Vertical">
-                                    <Label 
-                                            FontSize="18" 
-                                        Margin="5,10,0,0"
-                                            LineBreakMode="NoWrap" 
-                                            Style="{StaticResource MovieName}" 
-                                            Text="{Binding Title}" />
-
-
-                                    <yummy:PancakeView BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="30" HorizontalOptions="StartAndExpand" WidthRequest="70">
-                                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" VerticalOptions="Center">
-                                            <Label FontFamily="{StaticResource MaterialFontFamily}" FontSize="20" Text="&#xf4ce;" TextColor="#f7b602" />
-                                            <Label FontSize="16" Style="{StaticResource Rating}" Text="{Binding VoteAverage}" TextColor="#f7b602" />
-                                        </StackLayout>
-                                    </yummy:PancakeView>
-
-                                    <Label FontSize="16" VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Style="{StaticResource SubText}" Text="{Binding ReleaseDateString}" TextColor="#b2b2b2" />
-
-
+                                <BoxView Margin="20,0" BackgroundColor="LightGray" HeightRequest="0.5" />
+                                <StackLayout Margin="20" Orientation="Horizontal">
+                                    <Label FontSize="30" Style="{StaticResource MovieName}" Text="{Binding Title}" />
+                                   
                                 </StackLayout>
 
 
-
-
-
-
                             </StackLayout>
-
-
-
-
+                            
 
 
                         </yummy:PancakeView>
 
-
-
-
-
-
-
-
+                        
 
 
 

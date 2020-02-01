@@ -7,7 +7,7 @@ namespace Cinev.Model
     public class WishListUser
     {
 
-        public int UserID { get; set; }
+        public string Email { get; set; }
        // public Dictionary<int, int> MovisID { get; set; }
         public int MovieID { get; set; }
       
