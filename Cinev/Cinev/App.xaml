@@ -40,10 +40,26 @@
         </OnPlatform>
 
         <!--  styles  -->
+        
         <Style x:Key="MovieName" TargetType="Label">
             <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
             <Setter Property="FontSize" Value="14" />
             <Setter Property="TextColor" Value="{StaticResource MainTextColor}" />
+        </Style>
+        <Style x:Key="Input" TargetType="Entry">
+            <Setter Property="FontFamily" Value="{StaticResource RegularFont}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="#ffffff" />
+        </Style>
+        <Style x:Key="Buttons" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="#ffffff" />
+        </Style>
+        <Style x:Key="Login" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource LightFont}" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="{StaticResource StatusColor}" />
         </Style>
         <Style x:Key="Genre" TargetType="Label">
             <Setter Property="FontFamily" Value="{StaticResource BoldFont}" />

@@ -22,10 +22,14 @@ namespace Cinev.Views
 
         async private void LogInButton(object sender, EventArgs e)
         {
+<<<<<<< HEAD
          
+=======
+
+>>>>>>> 5faca73ea32d4f0fb294e231ae8071ed10a2d7f1
             var email = EmailInput.Text;
             var password = PasswordInput.Text;
-           if (string.IsNullOrWhiteSpace(email) || (string.IsNullOrWhiteSpace(password)))
+            if (string.IsNullOrWhiteSpace(email) || (string.IsNullOrWhiteSpace(password)))
             {
                 await DisplayAlert("Alert", "Fill all the fields", "OK");
             }
@@ -33,7 +37,7 @@ namespace Cinev.Views
             {
                 bool answer = await AuthenticationViewModel.checkUser(email, password);
 
-              
+
                 if (answer)
                 {
                     await DisplayAlert("Alert", "Authentication failed", "OK");

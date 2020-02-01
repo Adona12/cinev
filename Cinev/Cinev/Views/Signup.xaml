@@ -3,54 +3,92 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:yummy="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
              mc:Ignorable="d"
              x:Class="Cinev.Views.Signup"
-              NavigationPage.HasNavigationBar="false">
+              NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#02031a"
+             
+             >
     <ContentPage.Content>
         <StackLayout
         VerticalOptions="Center"
         Margin="20">
 
             <Label
-            Text="cinev park"
+            Text="Sign Up"
             HorizontalOptions="Center"
-            TextColor="#4682B4"
+                Style="{StaticResource Login}"
+            TextColor="#ffffff"
             FontSize="35"
             Margin="0, 20"
             />
-            <Entry
+            <yummy:PancakeView Margin="10" 
+                                           Padding="10,0,10,0" 
+                                             BackgroundColor="#1e2040"
+                                            CornerRadius="30" 
+                                            HeightRequest="50" 
+                                            HorizontalOptions="FillAndExpand">
+                <Entry
+              
+                TextColor="#d1d1d1"
+                
             Placeholder="Full Name"
             Keyboard="Text"
             x:Name="fullInput"
             />
+            </yummy:PancakeView>
 
-            <Entry
+            <yummy:PancakeView Margin="10" 
+                                           Padding="10,0,10,0" 
+                                             BackgroundColor="#1e2040"
+                                            CornerRadius="30" 
+                                            HeightRequest="50" 
+                                            HorizontalOptions="FillAndExpand">
+
+                <Entry
+                
+                 TextColor="#d1d1d1"
             Placeholder="E-mail"
             Keyboard="Email"
             x:Name="EmailInput"
             />
+            </yummy:PancakeView>
 
-            <Entry
+            <yummy:PancakeView Margin="10" 
+                                           Padding="10,0,10,0" 
+                                             BackgroundColor="#1e2040"
+                                            CornerRadius="30" 
+                                            HeightRequest="50" 
+                                            HorizontalOptions="FillAndExpand">
+
+                <Entry
+                TextColor="#d1d1d1"
             Placeholder="Password"
+                    
             IsPassword="true"
             x:Name="PasswordInput"
             />
-
+            </yummy:PancakeView>
             <Button
             Text="Sign up"
            Clicked="SignupButton"
-            Margin="60, 40"
-            BackgroundColor="#4682B4"
+            Margin="30, 30"
+            BackgroundColor="#606060"
             TextColor="White"
+                 Style="{StaticResource Buttons}"
+               BorderRadius="35"
             />
 
             <Button
             Text="Log in"
                x:Name="login"
                 Clicked="login_Clicked"
-   
-            Margin="60, 40"
-            BackgroundColor="#4682B4"
+    BorderRadius="35"
+                BackgroundColor="#422057"
+            Margin="60, 0"
+                Style="{StaticResource Buttons}"
+            
             TextColor="White"
             />
 

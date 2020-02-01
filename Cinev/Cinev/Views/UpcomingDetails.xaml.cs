@@ -113,7 +113,7 @@ namespace Cinev.Views
             wishList.Email = AuthenticationViewModel.LoggedinUser;
           
             WishListHelper wishHelper = new WishListHelper();
-            List<WishListUser> data = await wishHelper.GetAllWish(AuthenticationViewModel.LoggedinUser);
+
 
          
                 var label = (Label)sender;
