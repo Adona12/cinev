@@ -50,16 +50,25 @@
                                 <StackLayout WidthRequest="170" Spacing="20" Orientation="Vertical">
                                     <Label 
                                             FontSize="18" 
-                                        Margin="5,10,0,0"
+                                        Margin="5,30,0,0"
                                             LineBreakMode="NoWrap" 
                                             Style="{StaticResource MovieName}" 
                                             Text="{Binding Title}" />
 
 
-                                    <yummy:PancakeView BackgroundColor="#fefdf3" CornerRadius="15" HeightRequest="30" HorizontalOptions="StartAndExpand" WidthRequest="70">
+                                    <yummy:PancakeView BackgroundColor="#fefdf3"  Margin="0,10,0,0" CornerRadius="15" HeightRequest="30" HorizontalOptions="StartAndExpand" WidthRequest="70">
                                         <StackLayout HorizontalOptions="Center" Orientation="Horizontal" VerticalOptions="Center">
                                             <Label FontFamily="{StaticResource MaterialFontFamily}" FontSize="20" Text="&#xf4ce;" TextColor="#f7b602" />
-                                            <Label FontSize="16" Style="{StaticResource Rating}" Text="{Binding VoteAverage}" TextColor="#f7b602" />
+                                          
+                                                 <Label FontSize="16" Style="{StaticResource Rating}" Text="{Binding VoteAverage}" TextColor="#f7b602" />
+                                             
+                                           
+                                        </StackLayout>
+                                    </yummy:PancakeView>
+                                    <yummy:PancakeView BackgroundColor="#fcfaff" Margin="0,10,0,0" CornerRadius="15" HeightRequest="30" HorizontalOptions="StartAndExpand" WidthRequest="170">
+                                        <StackLayout HorizontalOptions="Center" Orientation="Horizontal" VerticalOptions="Center">
+                                            <Label FontSize="14" Style="{StaticResource SubText}" Text="Total Votes" TextColor="#d2d2d2" />
+                                            <Label FontSize="16" Style="{StaticResource Rating}" Text="{Binding VoteCount}" TextColor="#7c6b96" />
                                         </StackLayout>
                                     </yummy:PancakeView>
 
