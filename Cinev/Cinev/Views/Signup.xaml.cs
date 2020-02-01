@@ -32,10 +32,14 @@ namespace Cinev.Views
             else
             {
                 Users user = await userhelp.GetUser(email);
-                if (user.Email == email)
+
+                if (user != null)
                 {
-                    await DisplayAlert("Alert", "Email already exists", "OK");
-                }
+                    
+                        await DisplayAlert("Alert", "Email already exists", "OK");
+                    }
+                 
+                
                 else
                 {
                     _ = userhelp.AddUser(email, password, name);
