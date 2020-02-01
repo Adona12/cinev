@@ -40,7 +40,8 @@ namespace Cinev.Views
                 }
                 else
                 {
-                    await DisplayAlert("Alert", "passed", "OK");
+                    //await DisplayAlert("Alert", "passed", "OK");
+                    await Navigation.PushAsync(new TabbedPage1());
                 }
 
             }
